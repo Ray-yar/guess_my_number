@@ -18,7 +18,7 @@ def get_user_answer():
     After getting the data we need to pass it for validation
     """
     while True:
-        user_value = input("Guess my number: ")
+        user_value = input("Guess my number:\n")
         if validate_user_answer(user_value):
             return user_value
 
@@ -31,7 +31,6 @@ def validate_user_answer(value):
 
     try:
         int(value)
-    
         if int(value) > 20:
             print(f"Ohh no, {value} is out of range! Please enter between 1 - 20\n")
             return False
@@ -39,11 +38,9 @@ def validate_user_answer(value):
         elif int(value) < 0:
             print(f"Sorry, {value} is an invalid number, please try again.\n")
             return False
-    
     except:
         print("Sorry, you have entered an invalid amount!\n")
         return False
-
     return True
 
 # Generate Random Number
