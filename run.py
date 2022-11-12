@@ -15,6 +15,7 @@ print("")
 def get_user_answer():
     """
     In This Function we need to get data from user.
+    After getting the data we need to pass it for validation
     """
     while True:
         user_value = input("Guess my number: ")
@@ -23,6 +24,11 @@ def get_user_answer():
 
 # Validate User Data
 def validate_user_answer(value):
+    """
+    In this function we validate the user input,
+    like: type, amount and other validations
+    """
+
     try:
         int(value)
     
@@ -49,6 +55,10 @@ def generate_random_number():
     return rand_num
 
 def check_game_result(rand_num, user_data):
+    """
+    In this function we check the user input and the random number we assigned,
+    and response according to that.
+    """
 
     if int(user_data) > int(rand_num):
         print("Too large, Please try again.")
@@ -62,8 +72,11 @@ def check_game_result(rand_num, user_data):
         print("Congratulations, You have successfully guessed the correct number!")
         return 1
 
-# Run the Game
+
 def main():
+    """
+    The main function that runs the game and set score.
+    """
     score  = 20
     rand_num = generate_random_number()
     user_data = get_user_answer()
@@ -73,8 +86,12 @@ def main():
             score -= 1
             print("")
             print(f"Score: {score}")
+        elif score == 0:
+            print("You lost the game!")
+            break
         else:
             print("")
-            print(f"Your Score is: {score}")
+            print(f"Your final score is: {score}")
             break
+
 main()
