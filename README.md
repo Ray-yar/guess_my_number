@@ -1,31 +1,71 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+## Guess My Number
+---
 
-Welcome Rohullah Ahmadyar,
+Guess My Number is a python terminal game, which runs in the Code Institute moch terminal on Heroku
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+Users can guess the number which is assigned by computer, by answering wrong numbers, players score will come down until they loss the game.
 
-## Reminders
+Guess My Number has range of 1 to 20 to make interisting the evironment of game play.
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+<a href="https://guesss-my-number.herokuapp.com/">Here is the live version of my project</a>
 
-## Creating the Heroku app
+![Multi Layout](assets/docs/love_maths_mockup.png)
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+## How to play
+---
+It is a guessing game that the computer thinks of a number between 1 and 20, and users guess the number between this range. If the number is less or greater than the wanted number, they will receive feedback about their answer to enable them to guess another number. If the answer that the user provide is not correct then their score will decrease and descrease until they fail.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## Features
+---
+## Existing Features
+* Random guessing number generation
+* The user don't know what are the correct answer
+* The user needs to guess until he/she finds the correct answer
+* By answering wrong value the user will be ask to enter the correct number
+* By entering invalid number the user will be ask to enter correct number
+* This game is completely validated and no invalid entry will break its operation
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+    ![Multi Layout](assets/docs/Untitled.png)
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
 
-Connect your GitHub repository and deploy as normal.
+## Future Features
+* Allow users to select maximum range of guessing
+* Add more validation for being more user friendly
 
-## Constraints
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+## Data Model
+---
+I decided to create an input for the users to enter their guessing value and the computer will check their answer and show the result of the game.
 
------
-Happy coding!
+In this game *user_answer* and *computer_random_number* is very important and the operation will be handled base on them.
+
+In this game contains multi functions like: ```get_user_answer```, ```validate_user_answer```, ```generate_random_number```, ```check_game_result``` and ```main``` functions.
+
+## Testing
+---
+I have manually tested this project by doing the following steps:
+* Passed the code through the PEP8 linter and did't found any problem there
+* I have entered invalid inputs like string, empty value, but every thing was working normally and each error was handled very well.
+* I tested it in my local terminal and Heroku terminal it was working as expected
+
+## Validator Testing
+* PEP8
+    * No errors were found in PEP8online.com
+
+## Deployment
+---
+This project was deployed in github and then Heroku
+
+* Steps for deployment:
+    * Fork or clone this repository
+    * Create a new Heroku app
+    * Set the buildbacks to ```Python``` and ```NodeJS``` in that order
+    * Link the Heroku app to the repository
+    * Click on **Deploy**
+
+## Credits
+---
+* Code Institute for deployment terminal
+* Google and other free websites for game idea
+
+
