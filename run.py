@@ -18,21 +18,29 @@ def get_user_answer():
     """
     In This Function we need to get data from user.
     """
-    user_value = input("Guess my number:\n")
-    validate_user_answer(user_value)
+    while True:
+        user_value = input("Guess my number:\n")
+        if validate_user_answer(user_value):
+            print("Your data is valid")
+            break
 
 def validate_user_answer(value):
-    global user_input
-    while True:
-        try:
-            int(value)
-            print("The answer is validated!")
-            break
-        except ValueError as e:
-            print("Sorry, your answer is not validated.\n")
-            get_user_answer()
+    try:
+        int(value)
+    
+        if int(value) > 20:
+            print(f"Ohh no, {value} is out of range! Please enter between 1 - 20\n")
+            return False
 
+        elif int(value) < 0:
+            print(f"Sorry, {value} is an invalid number, please try again.\n")
+            return False
+    
+    except:
+        print("Sorry, you have entered an invalid amount!\n")
+        return False
 
+    return True
 
 def generate_random_number():
     """
