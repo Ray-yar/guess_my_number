@@ -7,7 +7,7 @@ Users can guess the number which is assigned by computer, by answering wrong num
 
 Guess My Number has range of 1 to 20 to make interisting the evironment of game play.
 
-<a href="https://guesss-my-number.herokuapp.com/">Here is the live version of my project</a>
+<a href="https://guess-my-numbr-15fb3c6e1ba5.herokuapp.com/">Here is the live version of my project</a>
 
 ![Multi Layout](assets/docs/love_maths_mockup.png)
 
